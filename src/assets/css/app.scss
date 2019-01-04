@@ -1,0 +1,37 @@
+// *, *:before, *:after {
+//     -moz-box-shadow: 0 0 5px rgba(0,168,225,.5);
+//     -webkit-box-shadow: 0 0 5px rgba(0,168,225,.5);
+//     box-shadow: 0 0 5px rgba(0,168,225,.5);
+// }
+
+@import 'variables-and-mixins.scss';
+
+@import 'header-footer.scss';
+
+@import 'foundation.scss';
+
+body {
+	padding-bottom:4rem;
+}
+.our-picture {
+	display:block;
+	margin-top:2rem;
+	img {
+		max-width:350px;
+		margin:0 auto;
+		display:block;
+		border-radius: 50%;
+		@include mobile {
+			max-width:250px;
+		}
+	}
+}
+
+.opening {
+	h1 {
+		margin-bottom:0;
+	}
+	p {
+		margin:0 auto;
+	}
+}

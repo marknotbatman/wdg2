@@ -1,0 +1,99 @@
+//Color Variables
+$purple-dark: #392664;
+$purple-light: #aa7cb4;
+$black: #444;
+.purple-dark {
+	color:$purple-dark;
+}
+.purple-light {
+	color:$purple-light;
+}
+.black {
+	color:$black;
+}
+
+//Fonts
+$serif: 'Libre Baskerville', serif;
+$sans: 'Lato', sans-serif;
+h1, .h1 {
+	font-size:40px;
+	font-family:$serif;
+	font-weight:normal;
+	font-style: italic;
+	margin:2rem 0;
+}
+h2, .h2 {
+	
+}
+h3, .h3 {
+	
+}
+p, li, a {
+	font-size: 1rem;
+	color:$black;
+	font-family: $sans;
+}
+a {
+
+}
+
+table, td, th {
+	border:1px $black solid;
+	th {
+		text-align: left;
+	}
+}
+
+
+//utility
+.center {
+	text-align: center;
+}
+
+//breakpoints
+$small-width: 39.9376em;
+$medium-width: 64.0em;
+$large-width:64.063em;
+
+@mixin mobile {
+	@media (max-width: #{$small-width}) {
+		@content;
+	}
+}
+@mixin mobile-up {
+	@media screen and (min-width: #{$large-width}) {
+		@content;
+	}
+}
+@mixin tablet {
+	@media (min-width: #{$small-width}) and (max-width: #{$medium-width}) {
+		@content;
+	}
+}
+@mixin tablet-landscape {
+	@media (min-width: #{$small-width}) and (max-width: #{$medium-width}) and (orientation: landscape) {
+		@content;
+	}
+}
+@mixin tablet-portrait {
+	@media (min-width: #{$small-width}) and (max-width: #{$medium-width}) and (orientation: portrait){
+		@content;
+	}
+}
+@mixin tablet-down {
+	@media screen and (max-width: #{$medium-width}) {
+		@content;
+	}
+}
+@mixin desktop {
+	@media screen and (min-width: #{$large-width}) {
+		@content;
+	}
+}
+@mixin ie {
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		@content;
+	}
+}
+
+
